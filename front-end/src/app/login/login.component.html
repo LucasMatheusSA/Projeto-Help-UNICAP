@@ -1,0 +1,23 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <div class="alert alert-danger" role="alert" *ngIf="flagMensg">
+      {{mensg}}
+    </div>
+    <!-- Icon -->
+    <br>
+    <div class="fadeIn first">
+      <h1>Login</h1>
+    </div>
+
+    <hr>
+    <form>
+      <input type="text" id="matricula" class="fadeIn second" name="matricula" placeholder="Matrícula" [(ngModel)]="matricula">
+      <input type="password" id="senha" class="fadeIn third" name="senha" placeholder="Senha" [(ngModel)]="senha">
+      <input type="submit" class="fadeIn fourth" value="Entrar" (click)="login()">
+    </form>
+
+  </div>
+</div>

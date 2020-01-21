@@ -1,0 +1,11 @@
+.divCenter {
+  margin: auto;
+  width: 80%;
+  background: #fff;
+  padding: 10px;
+}
+
+.alingRight {
+  /* text-align:right; */
+  float: right;
+}

@@ -1,0 +1,48 @@
+<div class="divCenter">
+
+  <div class="card">
+      <div class="card-header">
+        <h3>
+          {{data.dados[1]}} ({{data.dados[0]}})
+        </h3>
+      </div>
+      <ul class="list-group list-group-flush">
+        <h5>
+        <li class="list-group-item">{{data.dados[2]}}  
+            <span class="badge badge-primary alingRight"> Media Global: {{data.dados[3]}} / Media do ultimo periodo: {{data.dados[4]}}</span>
+          </li>
+        </h5>
+        <li class="list-group-item"><button class="list-group-item alingRight btn btn-outline-primary">Calendario</button></li>
+      </ul>
+    </div>
+    <br>
+  <br>
+  <hr>
+  <div *ngFor="let item of data.notas">
+    <div class="card text-white {{colorCard(item)}} mb-3">
+      <div class="card-header">({{item.cod}}) <h5 class="card-title">{{item.mat}}
+        <span class="badge badge-secondary alingRight">{{mensgCard(item)}} </span></h5>
+
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">1 GQ</th>
+                <th scope="col">2 GQ</th>
+                <th scope="col">Final</th>
+                <th scope="col">Media</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{item.gq1}}</td>
+                <td>{{item.gq2}}</td>
+                <td>{{item.final}}</td>
+                <td>{{item.media}}</td>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
